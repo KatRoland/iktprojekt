@@ -35,9 +35,7 @@ body {
   color: black;
 }
 
-.row{
-border: red solid 1px ;
-}
+
 
 /* Create three equal columns that floats next to each other */
 .column {
