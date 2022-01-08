@@ -1,63 +1,190 @@
-* {
-  box-sizing: border-box;
-}
 
 body {
-  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+
 }
 
-/* Style the header */
-/* .header {
-  background-color: #f1f1f1;ff
-  padding: 20px;
-  text-align: center;
-} */
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+a {
+  color: #2487ce;
   text-decoration: none;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+a:hover {
+  color: #469fdf;
+  text-decoration: none;
 }
 
-.row{
-border: red solid 1px ;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-   float: left;
-  margin: auto;
-  width: 40%;
-  padding: 15px;
-  border: 1px black solid;
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
   }
 }
+
+#header {
+  transition: all 0.5s;
+  background: rgb(59, 56, 56);
+  z-index: 997;
+  padding: 15px 0;
+  border-bottom: 1px solid #e6f2fb;
+}
+#header .logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+#header .logo a {
+  color: #0091ff;
+}
+#header .logo img {
+  max-height: 40px;
+}
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+}
+
+#mainbox {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("assets/img/mainbox-bg.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+#mainbox:before {
+  content: "" ;
+  background: rgba(19, 20, 20, 0.774);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#mainbox .container {
+  padding-top: 80px;
+}
+
+
+#mainbox h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 72px;
+  color: #0095ff;
+  font-family: "Poppins", sans-serif;
+}
+#mainbox h2 {
+  color: #a5a0a0;
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
+
+#mainbox .icon-boxes {
+  margin-top: 100px;
+}
+#mainbox .icon-box {
+  padding: 50px 30px;
+  position: relative;
+  overflow: hidden;
+  background: rgb(15, 14, 14);
+  box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+#mainbox .icon-box .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#mainbox .icon-box .title a {
+  color: #2e77ac;
+  transition: 0.3s;
+}
+#mainbox .icon-box .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+  color: rgb(146, 146, 146);
+}
+#mainbox .icon-box .icon {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  font-size: 36px;
+  line-height: 1;
+  color: #2487ce;
+}
+#mainbox .icon-box:hover {
+  transform: scale(1.08);
+}
+#mainbox .icon-box:hover .title a {
+  color: #1b8ddf;
+}
+@media (min-width: 1024px) {
+  #mainbox {
+    background-attachment: fixed;
+  }
+}
+@media (max-height: 800px) {
+  #mainbox {
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  #mainbox {
+    height: auto;
+  }
+  #mainbox h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #mainbox h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f8fbfe;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #124265;
+}
+.section-title p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #919191;
+}
+
+
+
