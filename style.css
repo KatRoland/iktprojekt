@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
 }
+
 #mainbox .container {
   padding-top: 80px;
 }
@@ -84,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 72px;
   color: #0095ff;
   font-family: "Poppins", sans-serif;
+  text-transform:uppercase;
 }
 #mainbox h2 {
   color: #a5a0a0;
@@ -98,21 +100,20 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px 30px;
   position: relative;
   overflow: hidden;
-  background: rgb(15, 14, 14);
+  background: rgba(19, 20, 20, 0.774);
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
 }
+
 #mainbox .icon-box .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
-}
-#mainbox .icon-box .title a {
   color: #2e77ac;
-  transition: 0.3s;
 }
+
 #mainbox .icon-box .description {
   font-size: 15px;
   line-height: 28px;
@@ -186,5 +187,33 @@ section {
   color: #919191;
 }
 
+.button{
+  background: blue;
+  border: transparent;
+  height: 310px;
+}
 
+.buttton:hover{
+    transform: scale(1.08);
+}
 
+ .typing-demo {
+  width: 0;
+  animation: typing 1s steps(20), blink  infinite ;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from { width: 100%}
+  to { width: 0%}
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+} 
