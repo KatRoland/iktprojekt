@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  width:100vw;
+
+}
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #ffffff;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  border-right: 2px black solid;
+}
+
+h4{
+  font-size: 24px;
+  text-align: center;
+}
+
+h3 {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.tab-content {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  margin-left:300px;
+  width: 67%;
+}
+
+.tab-content p {
+  text-align: justify;
+  line-height: 1.9;
+  letter-spacing: 0.4px;
+  color: #141313;
+}
+.tab-content div {
+  display: none;
+}
+.tab-content .active {
+  display: block;
+}
+.tabs .active {
+  background-color: #1f1d1d;
+  color: #ada9a9;
+}
+
+
+@media screen and (max-width: 700px) {
+  .tabs {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .tabs a {float: left;}
+  div.container {margin-left: 0;}
+}
