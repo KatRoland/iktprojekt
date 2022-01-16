@@ -12,22 +12,52 @@
     <div class="container">
 
       <div class="tabs" id="tabs">
+        <h4>Alkatrészek</h4>
+           <h3 >Tápegység</h3>
+           <h3>Hálózati kártya</h3>
+           <h3>Memória</h3>
+           <h3>Elektronikus tárolók</h3>
+           <h3>Háttértár</h3>
+           <h3>Merevlemez</h3>
         <h4>Perifériák</h4>
-        <h3>Tab 1</h3>
-        <h3>Tab 2</h3>
-        <h4>Components</h4>
-        <h3>Tab 3</h3>
-        <h3>Tab 4</h3>
+          <h3>Monitor</h3>
+          <h3>Billentyűzet - egér</h3>
+        <h4>Egyebek</h4>
+          <h3>BIOS</h3>
+          <h3>Felhő számtech</h3>
       </div>
 
       <div class="tab-content">
         <div>
-          <h4 class="cim">Tápegység</h4>
+          <h4 class="cim" style="padding: 15px">Tápegység</h4>
           <p>
              A számítógép működéséhez nagyon lényeges a gép működéséhez kellő feszültséget állítja elő. Angolul: Power Supply Unit (PSU).    
-            -230V váltóáramot egyenárammá és törpefeszültséggé alakít
-            
           </p>
+          <p>-230V váltóáramot egyenárammá és törpefeszültséggé alakít</p>
+          <h4 style="padding: 15px"><u>Kimenetek:</u></h4>
+          <p>A kimenetek más-más feszültséget igényelnek </p>
+
+<!-- Teendő: Lista elemei közé kb 10px térköz -->
+          <ul>
+            <li> -12V: COM-port magyarul, kommunikációs-port -nak negatív a feszültségszintje.</li>
+            <li> +3,3V: Bővítőkártyák (mint Pl: PCI, AGP) és processzorok, integrált áramkörök.</li>
+            <li>	+5VSB: Szünetmentes feszültség, a pc kikapcsolása után is megmarad. azoknak az
+               eszközöknek marad fent, amik elindíthatják a számítógépet. PL: USB billentyűzet vagy
+                egér, vagy PCI kártyák.</li>  
+            <li> +5V: Kommunikációs csatornák, USB-s eszközöknek az energiája, Bővítőkártyáké és Hardverelemeké.</li>
+            <li>	+12V: Többségben mechanikus egységeknek van (Ventilátor, Merevlemez, optikai lemezmeghajtó) </li>
+          </ul>
+          <h4 style="padding: 15px"><u>Fajtái:</u></h4>
+          <ul>
+            <li>	ATX: alaplap folyamatos áramellátás alatt van (+5V) így lehetséges az, hogy a gépet
+               szoftveres úton leállítsuk, és külső hardveregységgel bekapcsoljuk (mint PL: modem, hálózati kártya)</li>
+            <li> Külső tápegység</li>
+            <li>	AT: Ezt au OP-rendszer nem tudja irányítani és nem tudja kikapcsolni 1996-ig P2-P3-mas 
+              alaplapokig használták. Az ezen fajta tápegységek túlnyomóba ún kapcsolóüzemű
+               tápegységek voltak.</li>
+          </ul>
+
+
         </div>
 
         <div>
@@ -80,6 +110,44 @@
             Dolore harum iure asperiores temporibus rem modi, iusto voluptate
             ducimus minima ut.
           </p>
+        </div>
+        <div>
+          <h4 style="padding: 15px">BIOS</h4>
+
+          <p>A BIOS (Basic Input Output System) a számítógépek nélkülözhetetlen része. 
+            Anno nagyobb szerepe jutott a számítógép és a hardverek működésében, illetve a hardver
+             és szoftver összeköttetésében, manapság ez kissé háttérbe szorult, de az indításnál
+              létfontosságú szerepet kap.</p>
+            
+            <p>A BIOS fizikailag egy elektromos úton programozható ROM (EEPROM) chip, 
+              amelynek manapság továbbfejlesztett flashtárolós változatát alkalmazzák.
+               Ez elektromos úton törölhető, írható, frissíthető, és a beleírt program nem vész el a
+                tápellátás hiányában. A BIOS-ban elvégzett beállításokat nem a ROM, hanem egy RAM tárolja.</p>
+
+              <p>A RAM előnye: Ha valamit elállítunk a BIOS-ban, ami megakadályozza a számítógép elindulását,
+                 azt szoktuk tenni, hogy töröljük a beállításokat a RAM tápellátásának megszakításával 
+                 (elem eltávolítása, BIOS reset gomb vagy jumper), aminek hatására a BIOS alapbeállításaival
+                  indul a gép.</p>
+
+                <p>Maga a BIOS-kód 16 bites, a korszerű operációs rendszerek munkájuk során nem tudják használni.</p>
+
+
+<!-- Teendő: Lista elemei közé kb 10px térköz -->                
+              <h4 style="padding: 15px"><u>BIOS Feladatai</u> </h4>
+                <ul>
+                  <li>	A számítógép indításához kapcsolódó beállítások és ellenőrzések elvégzése</li>
+                  <li>	Eszközeink típusának és adatainak ellenőrzése, illetve alap működési módjuk beállítása</li>
+                  <li>	A BIOS másik fontos feladata az operációs rendszer behúzójának, a merevlemez Master Boot Recordjának betöltése a memóriába, majd a vezérlés átadása erre a kódrészletre.</li>
+                </ul>
+                
+                <h4 style="padding: 15px"><u>Belépés a BIOS-ba</u></h4>
+                <p>A BIOS-beállítómenü elérése egy billentyű vagy billentyűkombináció lenyomásával lehetséges.
+                   Az, hogy az adott alaplapunknál melyik ez a billentyű, arról az indításkor látható képernyőn
+                    kaphatunk információt, vagy az alaplap kézikönyvében nézhetjük meg.</p>
+                  <p>Az indító billentyűk lehetnek: DEL, Delete, F2, F8, F11 vagy F12 billentyűk.</p>
+                  <p>Belépés után egy több elemből álló menürendszer tárul elénk. Az alapértelmezés 
+                    szerinti menüpontok száma gyártónként eltérő lehet, ám mégis hasonló lehetőségeket lelhetünk fel.</p>
+
         </div>
       </div>
     </div>
