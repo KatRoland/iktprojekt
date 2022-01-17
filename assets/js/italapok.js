@@ -17,3 +17,16 @@ tabs.forEach((tab, index) => {
 
 
 
+function menuopen() {
+  document.getElementById('menuopen').style.display = 'none'
+  document.getElementById('tabs').style.display = 'block'
+  document.getElementById('menuclose').style.display = 'block'
+
+}
+
+function menuclose() {
+  document.getElementById('menuopen').style.display = 'block'
+  document.getElementById('tabs').style.display = 'none'
+  document.getElementById('menuclose').style.display = 'none'
+
+}

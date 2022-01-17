@@ -13,15 +13,25 @@ body {
 
 }
 
+.menuopen{
+  display: none;
+}
+
+.menuclose{
+  display: none;
+}
+
 .tabs {
   margin: 0;
   padding: 0;
-  width: 300px;
+  width: 20%;
+  max-width: 350px;
   background-color: #ffffff;
   position: fixed;
   height: 100%;
   overflow: auto;
   border-right: 2px black solid;
+
 }
 
 h4{
@@ -39,7 +49,7 @@ h3 {
 .tab-content {
   background-color: #ffffff;
   padding: 50px 40px;
-  margin-left:300px;
+  margin-left:20%;
   width: 67%;
 }
 
@@ -66,7 +76,35 @@ h3 {
     width: 100%;
     height: auto;
     position: relative;
+    display: none;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: auto;
   }
   .tabs a {float: left;}
-  div.container {margin-left: 0;}
+
+
+  .tab-content{
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .menuopen{
+    display: block;
+    float: left;
+    top: 20px;
+  }
+
+}
+
+.tabs h4{
+  background-color: gray;
+}
+
+.tabs hr{
+  margin-top: 5px;
+}
+
+li{
+  margin: 1em;
 }

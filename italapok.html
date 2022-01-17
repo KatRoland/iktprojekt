@@ -6,10 +6,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/italap.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   </head>
   <body>
     
     <div class="container">
+
+<div class="menuopen" id="menuopen">
+  <button class="menubutton" id="menubutton" onclick="menuopen()"><i class="bi bi-list"></i></button>
+</div>
+
+<div class="menuclose" id="menuclose">
+  <button class="menuclosebutton" id="menuclosebutton" onclick="menuclose()"><i class="bi bi-list"></i></button>
+</div>
 
       <div class="tabs" id="tabs">
         <h4>Alkatrészek</h4>
@@ -19,9 +29,11 @@
            <h3>Elektronikus tárolók</h3>
            <h3>Háttértár</h3>
            <h3>Merevlemez</h3>
+           <hr>
         <h4>Perifériák</h4>
           <h3>Monitor</h3>
           <h3>Billentyűzet - egér</h3>
+          <hr>
         <h4>Egyebek</h4>
           <h3>BIOS</h3>
           <h3>Felhő számtech</h3>
@@ -37,7 +49,6 @@
           <h4 style="padding: 15px"><u>Kimenetek:</u></h4>
           <p>A kimenetek más-más feszültséget igényelnek </p>
 
-<!-- Teendő: Lista elemei közé kb 10px térköz -->
           <ul>
             <li> -12V: COM-port magyarul, kommunikációs-port -nak negatív a feszültségszintje.</li>
             <li> +3,3V: Bővítőkártyák (mint Pl: PCI, AGP) és processzorok, integrált áramkörök.</li>
@@ -63,52 +74,50 @@
         <div>
           <h4>Second Title</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
-            fugiat ab? Accusamus sed a iusto? Placeat incidunt repudiandae vero
-            magnam nihil tempore quasi earum illum totam aut delectus aliquam
-            pariatur, iste, qui provident quo voluptatem neque facere id
-            laudantium aliquid numquam nisi accusantium. Inventore reiciendis
-            nulla, iste perferendis voluptate soluta eum ullam! Explicabo
-            adipisci, amet, eum id quasi est consequuntur in, facere dolor
-            cupiditate praesentium cumque! Quis consequuntur nesciunt animi
-            adipisci corrupti tempore. Porro labore consequatur sequi rerum
-            neque iure, repudiandae laudantium excepturi velit? Autem
-            recusandae, sunt nam aut accusamus sint ipsam officia corporis
-            numquam doloremque provident. Et tenetur illum nihil ipsum
-            voluptatem explicabo quidem dignissimos, repellat ut quisquam, dicta
-            cumque quas voluptatibus dolorum exercitationem minima inventore
-            aliquam, natus corrupti.
+ 
           </p>
         </div>
 
         <div>
+          <h4>asd1 Title</h4>
+          <p>
+ 
+          </p>
+        </div>
+
+        <div>
+          <h4>asd2 Title</h4>
+          <p>
+ 
+          </p>
+        </div>
+
+        <div>
+          <h4>asd3 Title</h4>
+          <p>
+ 
+          </p>
+        </div>
+
+        <div>
+          <h4>asd4 Title</h4>
+          <p>
+ 
+          </p>
+        </div>
+
+
+
+        <div>
           <h4>Third Title</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-            autem accusantium voluptate debitis ipsa animi aliquid dolore?
-            Suscipit consequatur architecto ullam perferendis praesentium sed
-            aliquid voluptatem quibusdam laborum, doloremque aut atque debitis
-            et laudantium qui veniam eligendi accusamus ipsam optio, assumenda
-            aliquam ipsum dolorem similique? Alias, ducimus eaque. Labore nihil
-            quia itaque, at necessitatibus deserunt error, odit exercitationem
-            sequi eveniet mollitia tempore laborum dolor aut odio minus vero.
-            Dolore harum iure asperiores temporibus rem modi, iusto voluptate
-            ducimus minima ut.
+
           </p>
         </div>
         <div>
           <h4>4 Title</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-            autem accusantium voluptate debitis ipsa animi aliquid dolore?
-            Suscipit consequatur architecto ullam perferendis praesentium sed
-            aliquid voluptatem quibusdam laborum, doloremque aut atque debitis
-            et laudantium qui veniam eligendi accusamus ipsam optio, assumenda
-            aliquam ipsum dolorem similique? Alias, ducimus eaque. Labore nihil
-            quia itaque, at necessitatibus deserunt error, odit exercitationem
-            sequi eveniet mollitia tempore laborum dolor aut odio minus vero.
-            Dolore harum iure asperiores temporibus rem modi, iusto voluptate
-            ducimus minima ut.
+
           </p>
         </div>
         <div>
@@ -130,9 +139,7 @@
                   indul a gép.</p>
 
                 <p>Maga a BIOS-kód 16 bites, a korszerű operációs rendszerek munkájuk során nem tudják használni.</p>
-
-
-<!-- Teendő: Lista elemei közé kb 10px térköz -->                
+              
               <h4 style="padding: 15px"><u>BIOS Feladatai</u> </h4>
                 <ul>
                   <li>	A számítógép indításához kapcsolódó beállítások és ellenőrzések elvégzése</li>
@@ -149,6 +156,14 @@
                     szerinti menüpontok száma gyártónként eltérő lehet, ám mégis hasonló lehetőségeket lelhetünk fel.</p>
 
         </div>
+        
+                  <div>
+                    <h4>asd5 Title</h4>
+                    <p>
+ 
+                    </p>
+                  </div>
+
       </div>
     </div>
     <script src="assets/js/italapok.js"></script>
