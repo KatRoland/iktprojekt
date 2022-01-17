@@ -1,0 +1,34 @@
+Adatmentés:
+  A számítógépen tárolt infókról készült biztonsági mentés, arra az esetre, ha az eredeti megsérülne. Szoftveres és hardveres megoldások kombinációjaként megy végbe a feladat.
+
+Típusai:
+  - nincs biztonsági mentés (nem készítünk semmijet)
+  - teljes mentés minden alkalommal (az összes információt lementeni minden alkalommal)
+  - növekvényes mentés (csak a változásokról készül biztonsági mentés)
+  - differenciális mentés (az utolsó teljes mentés óta változott adatokat mentjük)
+  - folyamatos védelem (Minden adatot, illetve adatváltozást pár másodperc késéssel a mentési adathordozóra írjuk)
+
+Adatbázis modellek (megadjék az adattárolás módját):
+  - struktúrálatlan: minden benne van, csak nincs rendszerezve
+  - rendszerképzés: eltérő időpontok biztonsági mentései
+  - inkrementális: csak a növekvényeket mentjük el, bizonyos időközönként
+  - diferenciális: az utolsó teljes mentés utáni változásokat mentjük el
+  - fordított delta: tárolja a legutóbbi tükröt és a tükör különbségét a mostani és a korábbi között
+
+Biztonsági mentésre alkalmas adattárolók:
+  - mágneses szalag (hosszútávú, lassú)
+  - merevlemez (hosszútávú, sérülés esetén helyreállítható
+  - optikai tárolás (rövid távú, olcsó)
+  - szilárd, flash memória (pendrive, memória kártya, stb.)
+  - távoli szolgáltatás, felhő (nagyon biztonságos is lehet)
+
+Biztonsági másolat készítésének a folyamata:
+  1. a megfelelő adathordozó kiválasztása
+  2. adatok kiválasztása
+  3. adatmentés
+  4. helyreállítás
+
+Adatok megsemmisítése:
+  - fizikai megsemmisítés (magában az adathordozóban teszel kárt)
+  - demagnetizálás (csak a mágneseseknél használ)
+  - felülírás, többszörös felülírás

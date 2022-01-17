@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/python.css">
+
+</head>
+<body>
+
+    <div class="container">
+        
+            <div class="egy col-md-12">
+               <h1 class="cim">Python</h1>
+            </div>
+            <div class="panel col-md-12">
+                <h2><span class="type" style="--n:8">Változók</span></h2>
+                <p><span class="type" style="--n:5000000">Változókban értékeket lehet tárolni. Egy változóban csak egy érték lehet. Ez lehet szöveg, szám, bool(Értéke lehet igaz vagy hamis). <br><br> szam = 0 <br> szöveg = 'alma' <br> igaz = True <br> hamis = False <br> Lehetséges egyszerre több változónak értéket megadni. <br> x, y = 5, 7 <br> gyumolcs, zoldseg = alma, répa <br> A változók értékét a panelre ki lehet írni egymagában, vagy szöveggel körítve. Ha szimplán a változót akarod kiírni, akkor csak a nevét kell beleírni a zárójelbe, de hogyha hozzá szeretnél fűzni valamit, akkor egy 'f' et kell tenni a macskakörmök elé, és a változó nevét kapcsoszárójelbe kell tenni. <br> print(gyumolcs) -> alma <br> print(f'János nagyon szereti az {gyumolcs}-t') -> János nagyon szereti az alma-t</span></p>
+                <h3><span class="type" style="--n:50000">Adattípusok</span></h3>
+                <p><span class="type" style="--n:50000">Több különböző adattípus van, párat már megemlítettem feljebb. <br> Str/String adattipusúak az egyszerű szövegek. A String adattípusba tartozik minden amit macskakörmök közé rak a felhasználó <br> szoveg = 'nagyító' <br> Három fajta adattípus van ami a számokra vonatkozik. Int, ami egy egész szám. Float, ami tört szám is lehet. Complex, amikor a számhoz kapcsolódik egy 'j' is. <br> szam1 = 3 <br> szam2 = 1.7 <br> szam3 = 3j <br> A bool adattípus lehet igaz, vagy hamis. <br>  </span></p>
+                <h3><span class="type" style="--n:50000">Operátorok</span></h3>
+                <p><span class="type" style="--n:50000">
+                    x = 2<br>
+                    y = 6<br>
+                    <br>
+                    z = x + y - összeadás<br>
+                    z = x - y - kivonás<br>
+                    z = x * y - összeszorzás<br>
+                    z = y / x - osztás<br>
+                    z = x % y - osztás, de a végeredmény a maradék lesz<br>
+                    z = x ** y - hatványozás (jelen esetben 2^6)<br>
+                    z = x // y - osztás, de a végeredményt lekerekíti a legközelebbi egész számra<br>
+                    <br>
+                    x += 3 - x-értékének növelése 3-mal, vagy stringek esetében hozzáfűzés<br>
+                    x -= 3 - x-értékének csökkentése 3-mal<br>
+                    x *= 3 - x-értékének 3-szorozása<br>
+                    x /= 3 - x-értékének harmadolása<br>
+                    x %= 3 - x-érték harmadolásának a maradéka<br>
+                    x //= 3 - x-érték harmadolása egészre kerekítve<br>
+                    x **= 3 - x-érték 3. hatványra emelése<br>
+                    <br>
+                    == Egyenlő<br>
+                    != Nem egyenlő<br>
+                    > nagyobb mint<br>
+                    < kissebb mint<br>
+                    >= nagyobb, vagy egyenlő<br>
+                    <= kisebb, vagy egyenlő<br>
+                    <br>
+                    and -> Ha mindkét feltétel igaz, igaz lesz<br>
+                    or -> Ha az egyik feltétel igaz, igaz lesz<br>
+                    not -> Ha a feltétel hamis, akkor igaz lesz</span></p>
+                <h2><span class="type" style="--n:50000">Ciklusok</span></h2>
+                <h3><span class="type" style="--n:50000">For</span></h3>
+                <p><span class="type" style="--n:50000"> A ciklus által használt változóra csak a cikluson belül lehet hivatkozni. A változó tartalmazhatja, hogy hányadjára fut a ciklus, vagy más értéket (pl. egy lista adott elemét). <br><br> for szam in range(10): <br>  print(szam) <br><br> Ez a ciklus 10-szer fut le, és minden kerben azt írja ki hogy hányadjára fut le, a számolást 0-tól kezdve. Ha azt szeretnénk a ranget megadhatjuk úgy is hogy 'range(1, 10)', így 1-től fogja kezdeni a számolást. <br><br> for i in gyumolcsok: <br>  print(i) <br><br> Ez a ciklus a 'gyumolcsok' lista elemein megy végig, annyiszor fut le, ahány eleme van a listának. Minden körben kiírja az adott elemet a terminálba az előző alá. Ha azt szeretnénk hogy egymás mellé írja ki az elemeket, akkor ezt kell használnunk: <br> print(i, end=' ')</span></p>
+                <h3><span class="type" style="--n:50000">While</span></h3>
+                <p><span class="type" style="--n:50000">A while ciklus folyamatosan lefut újra, és újra. Addig ismétlődik, ameddig a megadott feltétel érvényesül vagy nem töri meg a felhasználó. <br><br> szam = 0 <br> while szam == 0: <br> print('A változó értéke még mindig nulla') <br> Ez a ciklus addig ismétlődik, ameddig a szam változó értéke nem változik. A break használatával bárhol megszakíthatjuk a cilust. <br><br> while szam > 5 and szam < 10: <br>    print('nulla')<br>  if szam == 7: <br>      break <br> Ez a ciklus addig ismétlődik, még szám értéke 5 és 10 között van, de ha 7 akkor megszakad. A breakhez hasonló a continue, de ő nem szakítja meg a ciklust, csak teljesen előről kezdi. <br><br> while szam > 5 and szam < 10: <br> if szam == 7: <br> continue <br> print('Szeretem a tejet') <br> (A print az ifen kívül van) Ebben az esetben, ha szam értéke 7, nem fog kiírni semmit a terminálba, de folytatódni fog a ciklus. </span></p>
+                <h2><span class="type" style="--n:50000">If...esle</span></h2>
+                <p><span class="type" style="--n:50000"></span></p>
+            </div>
+    
+    </div>
+    
+
+        
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

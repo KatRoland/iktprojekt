@@ -1,0 +1,49 @@
+
+
+.panel {
+    background-color: black;
+    padding: 30px;
+    box-shadow: 1px 1px 0px 2px #0000e6;
+    margin-bottom: 10px;
+
+    
+}
+
+body{
+  background-color: black;
+}
+
+.cim{ 
+    font-size: 100px;
+    animation: fi 1s linear forwards;
+    color: #0000e6;
+    margin-bottom: 15px;
+}
+
+
+.type {
+  font-family: monospace;
+  font-size: larger;
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#1aff1a 5px,#0000 0) 10px 0,
+    linear-gradient(#1aff1a 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*.002s) steps(var(--n)) forwards;
+}
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+
+@keyframes fi {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
