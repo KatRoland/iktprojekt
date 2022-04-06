@@ -1,0 +1,420 @@
+body {
+  margin:0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+html , body{
+  height: 100%;;
+}
+
+/* Dark mode */
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Oldalak */
+
+.tabcontent {
+color: white;
+display: none;
+padding: 6.25rem 1.25rem;
+height: 100%;
+}
+
+/* Oldal szinek */
+
+#Home {background-color: #F8D289;display: block;}
+#Masodik {background-color: #f266;}
+#Harmadik {background-color: rgb(255, 183, 183);}
+#Negyedik {background-color: rgb(161, 255, 197);}
+#Otodik {background-color: rgb(202, 255, 159);}
+#Hatodik{background-color: rgb(205, 207, 171);}
+
+
+/* Jelek */
+
+@font-face {
+font-family: 'Material Icons';
+font-style: normal;
+font-weight: 500;
+src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+font-family: 'Material Icons';
+font-size: 1rem;
+}
+
+
+/* Loading */
+.loader {
+position: fixed; 
+display: block;
+width:31.25rem;
+height:31.25rem;
+top: 20%;
+left: 35%;
+right: 0;
+bottom: 0.625rem; 
+z-index: 2; 
+cursor: pointer; 
+border: 1rem solid #f3f3f3; 
+border-top: 1rem  solid #000000; 
+border-radius: 50%;
+animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.loadbg{
+background-color: rgba(0,0,0,0.5); 
+position: fixed; 
+display: block; 
+width: 100%; 
+height:100%; 
+background-color: rgba(0,0,0,0.5); 
+z-index: 2; 
+}
+
+/* Navbar */
+
+
+.navbar{
+overflow: hidden;
+display: flex;
+position: fixed;
+justify-content: center;
+bottom:0;
+align-items: center;
+background: #fff;
+padding: 1.25rem 0.938rem;
+border-radius: 0.75rem;
+box-shadow: 0 0.313rem 0.625rem rgba(0,0,0,0.2);
+bottom: 0;
+width: 50%;
+margin-left: 25%;
+border-radius: 1.25rem;
+margin-bottom: 1.25rem;
+}
+
+.navbar li{
+list-style: none;
+margin: 0 0.938rem;
+cursor: pointer;
+}
+
+
+.navbar .icon , .close{
+display: none;
+  }
+
+.navbar li a{
+position: relative;
+color: #333;
+font-size: 1.25rem;
+font-weight: 500;
+padding: 0.375rem 0;
+align-items: center;
+text-decoration: none;
+}
+
+.navbar li a:before{
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+height: 3px;
+width: 0%;
+background: #000000;
+border-radius: 0.625rem;
+transition: ease 0.4s ease;
+}
+
+.navbar li a:hover:before{
+width: 100%;
+}
+
+.navbar li a:active:before{
+  width: 100%;
+}
+
+#kozep{
+border: 0.5px solid black;  
+height: 1.3rem;
+}
+
+/* Mobil */
+
+
+@media screen and (max-width: 850px) {
+  li .tablink {
+    display: none;
+  }
+
+  .navbar  #kozep{
+    display: none;
+    }
+
+  .menu.responsive #kozep{
+    display: none;
+    }
+
+  .menu.responsive{
+    right: 0;
+    position: relative;
+    top: 25%;
+    z-index: 4;
+  }
+  .menu.responsive a {
+    float: none;
+    display: none;
+  }
+  .menu.responsive {float: none;}
+  .menu.responsive  {position: relative;}
+  .menu.responsive  {
+    display: block;
+    width: 50%;
+    margin-top: 1.25rem;
+  }
+  .menu.responsive a.icon{
+      display: none;
+  }
+  
+  .menu.responsive a{
+      margin-left: 0;
+      float: none;
+      display: block;
+      text-align: center;
+  }
+
+  .navbar{
+    overflow: hidden;
+    display: block;
+    position: 1;
+    text-align: center;
+    justify-content: center;
+    bottom:0;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.747);
+    padding: 1.25rem 0.938rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    bottom: 0;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 1.25rem;
+    margin-bottom: 1.25rem;
+    }
+
+    
+  .navbar a:not(:first-child){
+    display: none;
+  }
+  .navbar a.icon {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu.responsive a.close{
+      display: block;
+      text-decoration: none;
+      color: black;
+  }
+
+  .navbar a{
+      display: none;
+      margin: auto;
+  }
+
+  .navbar .g a{
+    width: 100%;
+    text-align: center;
+}
+
+  .navbar .g a .material-icons{
+    margin-right: 15%;
+  }
+
+  .navbar #Kereses{
+    display: none;
+  }
+
+  .navbar .Kereses{
+    display: none;
+  }
+
+  li .tablink {
+    display: none;
+        }
+}
+
+#Home:enabled .navbar{
+  display: none;
+}
+
+
+
+/* Menű */
+
+#menuu{
+  display: block;
+}
+
+
+.gomb button{
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  float: right;
+  text-align: center;
+  text-transform: none;
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  color: #ffff;
+  padding: 0.875rem 1.25rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.gomb button:hover {
+  background: rgba(221, 221, 221, 0.356);
+  color: rgb(255, 255, 255);
+}
+
+
+span{
+text-align: center;
+}
+
+/* Oldalsáv */
+
+.oldalsav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 3.75rem;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 1rem;
+}
+
+.oldalsav a {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.oldalsav details {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.oldalsav a:hover {
+  color: #818181;
+}
+
+
+.oldalsav details:hover {
+  color: #818181;
+}
+
+.oldalsav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 1.563rem;
+  font-size: 36px;
+  margin-left: 3.125rem;
+}
+
+.oldalsav div.tema{
+  padding: 0.5rem 0.5rem 0.625rem 2rem;
+  text-decoration: none;
+  font-size: 30px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.oldalsav li{
+  list-style: none;
+}
+
+@media screen and (max-height: 450px) {
+  .oldalsav {padding-top: 0.938rem;}
+  .oldalsav a {font-size: 1.125rem;}
+}
+
+  /* Kereso */
+
+
+#Oldalsav #kereso{
+  padding: 0.5rem 0.5rem 0.625rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  text-decoration: none ;
+  background-color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
+  margin-top: 1.25rem;
+}
+
+#Oldalsav #kereso:active{
+  border: none;
+}
+
+/* Motivácios */
+
+.motivacio{
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-transform:uppercase;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-top: 1.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 25%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  word-wrap:break-word;
+}
+
+.ir{
+  text-align: right;
+}
+
+/* Theme */
+
+#fekete{
+  -webkit-filter: invert(100%); 
+  filter: invert(100%);
+}

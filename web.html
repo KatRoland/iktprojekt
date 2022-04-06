@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/web.css">
+    <link rel="stylesheet" href="web/web.css">
+    <link rel="shortcut icon" href="web/favicon.png" type="image/x-icon">
     <title>WEB</title>
 </head>
 <body onload="document.getElementById('loader').style.display='none'">
@@ -15,107 +17,110 @@
 <!-- Navbar -->
 
     <div class="menu" id="menu">
-      <ul class="navbar" >
-        <li><a onclick="openPage('Home', this, '')"><span class="material-icons">home</span></a></li>
-        <li><a onclick="openPage('Masodik', this, '')"><span class="material-icons">help</span></a></li>
-        <li><a onclick="openPage('Harmadik', this, '')"><span class="material-icons">help</span></a></li>
-        <li><a onclick="openPage('Negyedik', this, '')"><span class="material-icons">help</span></a></li>
-        <li><a onclick="openPage('Otodik', this, '')"><span class="material-icons">help</span></a></li>
-        <li><a onclick="openPage('Hatodik', this, '')"><span class="material-icons">help</span></a></li>
-        <div> <a href="javascript:void(0)" class="icon" id="icon" onclick="myFunction()"><span class="material-icons">menu</span></a></div> 
-        <a href="javascript:void(0)" class="close" id="icon" onclick="myFunction()"><span class="material-icons">close</span></a>
+      <ul class="navbar" id="navbar" >
+        <li class="valaszto"><a href="#fel" onclick="openPage('Home', this)"><span class="material-icons">home</span></a></li>
+        <li class="valaszto"><a href="#fel" onclick="openPage('Masodik', this)"><span class="material-icons">help</span></a></li>
+        <li class="valaszto"><a href="#fel" onclick="openPage('Harmadik', this)"><span class="material-icons">help</span></a></li>
+        <div id="kozep"></div>
+        <li><a onclick="nyit()"><span class="material-icons">menu</span></a></li>
+        <div id="kozep"></div>
+        <li class="valaszto"><a href="#fel" onclick="openPage('Negyedik', this)"><span class="material-icons">help</span></a></li>
+        
+        <li><a href="#fel" onclick="openPage('Otodik', this)"><span class="material-icons">help</span></a></li>
+        <li><a href="#fel" onclick="openPage('Hatodik', this)"><span class="material-icons">help</span></a></li>
+        
+        <div> <a href="javascript:void(0)" class="icon" id="icon" onclick="Responsive()"><span class="material-icons">menu</span></a></div> 
+        
+        <a href="javascript:void(0)" class="close" id="icon" onclick="Responsive()"><span class="material-icons">close</span></a>
       </div>
     </div>
-         <!-- <li><button class="Kereses" id="Ker" onclick="document.getElementById('Kereses').style.display = 'block';"><span class="material-icons">search</span></li>
-        </div>
-        <li><input type="text" id="Kereses" onkeyup="Kereses()" placeholder="Kategória.." title="Ird be a kategoriat"></li>  -->
       </ul>
     
-       
-
-<!-- Main -->   
-
-
-
-<div id="Home" class="tabcontent">
-  <h3>Kezdőlap</h3>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem consectetur ipsum, doloribus facilis eveniet voluptatum quia, aut autem, fuga et sed! Error sunt cumque quaerat. Nisi accusantium tempore enim sed.</p>
+<!-- Oldalsáv -->   
+<div id="Oldalsav" class="oldalsav">
+  <div class="tema">TÉMAVÁLASZTÓ</div>
+  <ul id="temav">
+  <a href="javascript:void(0)" class="closebtn" onclick="zar()"><span class="material-icons">close</span></a>
+<!-- 1.sor -->
+  <li><details>
+    <summary onclick="openPage('Hatodik', this)">Hatodik oldal 8</summary>
+    <a href="#fel">Alpont 1</a> 
+    </details>
+</li>
+<!-- vége -->
+<!-- 3.sor -->
+<li><details>
+  <summary onclick="openPage('Home', this)">3 6</summary>
+  <a href="#fel">Alpont 1</a> 
+  </details>
+</li>
+<!-- vége -->
+<!-- 3.sor -->
+<li><details>
+  <summary onclick="openPage('Masodik', this)">Masodik oldal 8</summary>
+  <a href="#fel">Alpont 1</a> 
+  </details>
+</li>
+<!-- vége -->
+  <input type="text" id="kereso" onkeyup="keres()" placeholder="Téma név" title="Téma nevét ird be">
+</ul>
 </div>
 
+<!-- Első oldal -->
+<span id="fel"></span>
+<div id="Home" class="tabcontent">
+  <p>
+  <div class="kepes">
+    <py class="motivacio">
+          A próbatételek néha nehezebbek, mint ahogy képzeltük. </br>
+A tanuláshoz azonban elengedhetetlenek, és mindegyik közelebb visz az álmaink megvalósításához. </br>
+<p class="ir">Paulo Coelho</p> 
+    </p>
+  </div>
+  </div>
+  </p>
+</div>
+
+
+<!-- Második oldal -->
+
 <div id="Masodik" class="tabcontent">
+  <span id="fel"></span>
   <h3>Masodik</h3>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odit, iure tenetur assumenda voluptates dicta eaque similique tempora architecto! Molestiae, quibusdam! In eveniet exercitationem obcaecati accusamus velit omnis quibusdam neque!</p> 
 </div>
 
+<!-- Harmadik oldal -->
+<span id="fel"></span>
 <div id="Harmadik" class="tabcontent">
   <h3>Harmadik</h3>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque facilis, excepturi, asperiores sint soluta perspiciatis illum aliquid, nihil at dolores illo modi eius nam veritatis commodi porro debitis dicta?</p>
 </div>
 
+<!-- Negyedik oldal -->
+<span id="fel"></span>
 <div id="Negyedik" class="tabcontent">
   <h3>Negyedik</h3>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque facilis, excepturi, asperiores sint soluta perspiciatis illum aliquid, nihil at dolores illo modi eius nam veritatis commodi porro debitis dicta?</p>
 </div>
 
+<!-- Ötödik oldal -->
+<span id="fel"></span>
 <div id="Otodik" class="tabcontent">
   <h3>Otodik</h3>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque facilis, excepturi, asperiores sint soluta perspiciatis illum aliquid, nihil at dolores illo modi eius nam veritatis commodi porro debitis dicta?</p>
 </div>
 
+<!-- Hatodik oldal -->
+<span id="fel"></span>
 <div id="Hatodik" class="tabcontent">
-  <h3>Hatodik</h3>
+  <h3 id="8">Hatodik</h3>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque facilis, excepturi, asperiores sint soluta perspiciatis illum aliquid, nihil at dolores illo modi eius nam veritatis commodi porro debitis dicta?</p>
+  <p>verebely</p>
 </div>
 
 <!-- Menű -->      
 
 </body>
-
-<script>
-    function myFunction() {
-  var x = document.getElementById("menu");
-  if (x.className === "menu") {
-    x.className += " responsive";
-  } else {
-    x.className = "menu";
-  }
-}
-
-
-// function Kereses() {
-//   var input, filter, ul, li, button, i  ;
-//   input = document.getElementById("Kereses");
-//   filter = input.value.toUpperCase();
-//   ul = document.getElementById("menu");
-//   li = ul.getElementsByTagName("li");
-
-//   for (i = 0; i < li.length; i++) {
-//     button = li[i].getElementsByTagName("button")[0];
-//     if (button.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//       li[i].style.display = "";
-//     } else {
-//       li[i].style.display = "none";
-//     }
-//   }
-// }
-
-
-
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+<script src="web/web.js"></script>
 </html>
